@@ -1,3 +1,5 @@
+import java.util.*
+
 const val num = 99
 
 fun main() {
@@ -19,4 +21,9 @@ fun main() {
 
     str = "10"
     println("$a + $str = ${a + str.toInt()}")
+
+    val scan = Scanner(System.`in`)
+    a = scan.nextInt()
+    b = scan.nextInt()
+    println(a + b)
 }
