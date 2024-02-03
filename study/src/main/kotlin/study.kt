@@ -42,7 +42,7 @@ fun main() {
 //    var s = readLine()
 //    println(s)
 
-    println("======conditional statement Test======")
+    println("====== 조건문 테스트 ======")
     if (a > b) {
         println("a")
     }
@@ -97,4 +97,21 @@ fun main() {
     println(flag)
     flag = b > a
     println(flag)
+
+    println("====== 반복문 테스트 ======")
+    val items = listOf(1, 2, 3, 4, 5)
+    for (item in items) {
+        print("$item ")
+    }
+    println()
+    items.forEach { item -> print("$item ") }
+    println()
+    for (i in 0..items.size - 1) {
+        print("${items[i]} ")
+    }
+    println()
+    for (i in items.size - 1 downTo 0 step 2) {
+        print("${items[i]} ")
+    }
+    println()
 }
