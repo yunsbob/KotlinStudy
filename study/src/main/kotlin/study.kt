@@ -107,7 +107,11 @@ fun main() {
     println()
     items.forEach { item -> print("$item ") }
     println()
-    for (i in 0..items.size - 1) {
+    for (i in 0..items.size - 1) { // items.size - 1 포함
+        print("${items[i]} ")
+    }
+    println()
+    for (i in 0 until items.size) { // items.size 미포함
         print("${items[i]} ")
     }
     println()
@@ -120,9 +124,11 @@ fun main() {
 //    items.add(6) <- 변경 불가라 불가능
     val list = mutableListOf(1, 2, 3, 4, 5) // 변경 가능한 리스트
 //    val list : MutableList<Int> = mutableListOf(1, 2, 3, 4, 5) <- 생략전
+//    val list = MutableList(5){it} <- [1, 2, 3, 4, 5]
     list.add(6)
     list.remove(1)
     val arr = arrayOf(1, 2, 3) // 배열
+//    val arr = Array<Int>(3){0} <- [0, 0, 0]
     arr[0] = 10
 
     try {
@@ -145,7 +151,7 @@ fun main() {
 
     s1 = "b"
 //    s2 = s1!! <- 강제로 변환해 할 수 있지만 비추
-    s1?.let { s2 = s1 } // 140줄 코드와 의미 같음
+    s1?.let { s2 = s1 } // s1 != null 조건문 코드와 의미 같음
     println(s2)
 
     println("====== 함수 테스트 ======")
